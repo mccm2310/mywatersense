@@ -1,0 +1,83 @@
+
+$blue-light: #56c2da;
+$blue-medium: #52a5bf;
+$blue-dark: #4e828e;
+$white: #fff;
+$gray-light: #f7f7f7;
+$black: black;
+$border-dark: rgba(0, 0, 0, 0.125);
+$border-blue: #90d8ef;
+
+// @mixin adjustElement ($width, $display){
+//     width: $width;
+//     display: $display;
+// }
+
+.logo{
+    height: 67px;
+    width: 75px;
+    margin: -12px 0px;    
+    vertical-align: super;
+}
+
+body{
+    margin: 0;
+    width: 99.9vw;
+}
+
+.header{
+    background-color: $blue-light;
+    padding: 10px;
+}
+
+app-main-footer{
+    position: absolute;
+    bottom:0;
+    width: 98.7vw;
+}
+
+.footer{    
+    background: $blue-dark;    
+    padding: 10px;
+    color: $white;
+    cursor: default;
+}
+
+.footer p{
+    margin-bottom: 0;
+}
+
+.icon-col{
+    font-size: 20px;
+    text-align: center;
+}
+
+.icon-col a{
+    margin-right: 10px;
+    color: $white;
+}
+
+.icon-col a:hover{
+    text-decoration: none;
+    font-size: 25px;
+    color: $blue-medium;
+}
+
+.main-bar{
+    height: 30px;
+    background: $blue-dark;
+    padding: 10px;
+    margin: 10px 10px;
+}
+
+.container{
+    padding: 10px;
+}
+
+.display-inline-block{
+    display: inline-block;
+}
+
+.tab-pane{
+    padding: 10px 15px;
+}
