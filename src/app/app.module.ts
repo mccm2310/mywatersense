@@ -7,6 +7,7 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { MainHeaderBarComponent } from './components/main-header-bar/main-header-bar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainFooterComponent } from './components/main-footer/main-footer.compon
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

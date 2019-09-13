@@ -31,7 +31,7 @@ body{
 }
 
 app-main-footer{
-    position: absolute;
+    position: fixed;
     bottom:0;
     width: 98.7vw;
 }
@@ -80,4 +80,17 @@ app-main-footer{
 
 .tab-pane{
     padding: 10px 15px;
+}
+
+.container table{
+    text-align: center;
+}
+
+@media (max-width: 418px){
+    .mobile-right{
+        float: right;
+    }
+    .header{
+        min-height: 100px;
+    }
 }

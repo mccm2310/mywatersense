@@ -12,7 +12,7 @@ export class MainContentComponent implements OnInit {
   constructor(private requestService : RequestService) { }
 
   ngOnInit() {
-    this.getData();
+    this.getData();    
   }
 
   getData(){
@@ -24,12 +24,29 @@ export class MainContentComponent implements OnInit {
   }
   
   successResult(response){
+    response.forEach(x => {
+
+      let date = new Date(x.date)
+
+      let day = date.getDate() < 10 ? '0'+ date.getDate() : date.getDate();
+      let month = date.getMonth() + 1 < 10 ? '0'+ (date.getMonth() + 1) : date.getMonth() + 1;
+      let year = date.getFullYear()
+      let hour = date.getHours() < 10 ? '0'+ date.getHours() : date.getHours();
+      let minutes = date.getMinutes() < 10 ? '0'+ date.getMinutes() : date.getMinutes();
+      let seconds = date.getSeconds() < 10 ? '0'+ date.getSeconds() : date.getSeconds();
+      
+      x.formatDate = day +'/'+ month +'/'+ year + '  ' + hour+':'+minutes+':'+seconds;
+    });
     this.data = response;
   }
   errorResult(error){
     alert('Error');
   }
-  completeResult(){   
+  completeResult(){ 
+    var ctrl = this; 
+    setTimeout(function(){
+      ctrl.getData();
+    }, 500000); 
     console.log("the data request is completed")
   }
 
